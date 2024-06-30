@@ -208,9 +208,6 @@ class  StringFormatter{
   }
 }
 
-
-  }
-}
 const formatter = new StringFormatter();
 
 console.log(formatter.capitalize("hello world")); 
