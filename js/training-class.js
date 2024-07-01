@@ -212,3 +212,57 @@ const formatter = new StringFormatter();
 
 console.log(formatter.capitalize("hello world")); 
 
+
+
+/**
+ * Створи клас для калькулятора, який має такі методи:
+ * - метод number, який набуває початкового значення для наступних операцій
+ * - метод getResult, який повертає фінальний результат усіх операцій, проведених із числом
+ * - методи add, substruct, divide, multiply
+ * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+ */
+
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+
+  number(num) {
+    this.result = num;
+    return this;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  add(num) {
+    this.result += num;
+    return this;
+  }
+
+  substruct(num) {
+    this.result -= num;
+    return this;
+  }
+
+  divide(num) {
+    this.result /= num;
+    return this;
+  }
+
+  multiply(num) {
+    this.result *= num;
+    return this;
+  }
+}
+const calculator = new Calculator();
+console.log(calculator.result);
+const res = calculator.number(10).add(5).divide(3).multiply(2).substruct(3).getResult();
+const newCalc = new Calculator ();
+const res2 = newCalc.number(5).add(10).divide(5).multiply(10).substruct(2).getResult();
+// console.log(calculator);
+ console.log(res);
+ console.log(res2);
+
+
